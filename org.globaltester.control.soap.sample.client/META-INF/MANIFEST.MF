@@ -12,3 +12,4 @@ Export-Package: net.java.dev.jaxb.array,
 Bundle-Vendor: secunet Security Networks AG
 Bundle-ClassPath: gen/,
  .
+Require-Bundle: org.globaltester.lib.jaxws

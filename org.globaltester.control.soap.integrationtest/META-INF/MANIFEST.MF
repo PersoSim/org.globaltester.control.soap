@@ -15,3 +15,4 @@ Require-Bundle: org.globaltester.control.soap.sample.client,
 Import-Package: org.globaltester,
  org.osgi.framework;version="1.8.0"
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.globaltester.control.soap.integrationtest

@@ -4,11 +4,11 @@ Bundle-Name: GT Control SOAP Sample Service
 Bundle-SymbolicName: org.globaltester.control.soap.sample.service
 Bundle-Version: 3.9.0.qualifier
 Bundle-Activator: org.globaltester.control.soap.sample.service.Activator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Import-Package: 
  javax.jws,
  javax.jws.soap,
- org.osgi.framework;version="1.3.0"
+ org.osgi.framework
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.globaltester.control,
  org.globaltester.control.soap

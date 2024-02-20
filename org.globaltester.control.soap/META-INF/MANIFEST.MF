@@ -5,13 +5,13 @@ Bundle-SymbolicName: org.globaltester.control.soap;singleton:=true
 Bundle-Version: 3.9.0.qualifier
 Bundle-Activator: org.globaltester.control.soap.Activator
 Bundle-Vendor: secunet Security Networks AG
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Import-Package: javax.jws,
  javax.jws.soap,
  javax.xml.ws,
  javax.xml.ws.soap,
- org.osgi.framework;version="1.3.0",
- org.osgi.util.tracker;version="1.5.1"
+ org.osgi.framework,
+ org.osgi.util.tracker
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.globaltester.control;bundle-version="0.0.1",
  org.eclipse.ui,

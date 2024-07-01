@@ -2,20 +2,26 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GT Control SOAP Interface
 Bundle-SymbolicName: org.globaltester.control.soap;singleton:=true
-Bundle-Version: 3.9.0.qualifier
+Bundle-Version: 3.10.0.qualifier
 Bundle-Activator: org.globaltester.control.soap.Activator
 Bundle-Vendor: secunet Security Networks AG
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: org.osgi.framework;version="1.3.0",
- org.osgi.util.tracker;version="1.5.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Import-Package: javax.jws,
+ javax.jws.soap,
+ javax.xml.ws,
+ javax.xml.ws.soap,
+ org.osgi.framework,
+ org.osgi.util.tracker
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.globaltester.control;bundle-version="0.0.1",
+Require-Bundle: org.globaltester.control,
  org.eclipse.ui,
  org.eclipse.core.runtime,
  org.globaltester.service,
  org.globaltester.base,
  org.globaltester.logging,
- org.eclipse.core.resources
+ org.eclipse.core.resources,
+ org.eclipse.osgi
 Export-Package: org.globaltester.control.soap,
  org.globaltester.control.soap.preferences
 Multi-Release: true
+Automatic-Module-Name: org.globaltester.control.soap

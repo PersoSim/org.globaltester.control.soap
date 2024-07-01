@@ -2,9 +2,9 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GT RemoteControl SOAP Integration Test
 Bundle-SymbolicName: org.globaltester.control.soap.integrationtest
-Bundle-Version: 3.9.0.qualifier
+Bundle-Version: 3.10.0.qualifier
 Bundle-Vendor: secunet Security Networks AG
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.globaltester.control.soap.sample.client,
  org.globaltester.control.soap.sample.service,
  org.junit;bundle-version="4.12.0",
@@ -13,5 +13,6 @@ Require-Bundle: org.globaltester.control.soap.sample.client,
  org.globaltester.control.soap,
  org.globaltester.service
 Import-Package: org.globaltester,
- org.osgi.framework;version="1.8.0"
+ org.osgi.framework
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.globaltester.control.soap.integrationtest

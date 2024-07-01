@@ -344,7 +344,7 @@ Import-Package: com.ctc.wstx.api,
  org.osgi.framework,
  org.osgi.util.tracker
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.globaltester.control;bundle-version="0.0.1",
+Require-Bundle: org.globaltester.control,
  org.eclipse.ui,
  org.eclipse.core.runtime,
  org.globaltester.service,

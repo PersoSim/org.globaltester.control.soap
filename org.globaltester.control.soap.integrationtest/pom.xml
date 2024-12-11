@@ -4,13 +4,13 @@
   <parent>
     <groupId>org.globaltester</groupId>
     <artifactId>org.globaltester.parent.crossover</artifactId>
-    <version>3.10.1-SNAPSHOT</version>
+    <version>3.10.2-SNAPSHOT</version>
     <relativePath>../../org.globaltester.parent/org.globaltester.parent.crossover</relativePath>
   </parent>
   
   <groupId>org.globaltester</groupId>
   <artifactId>org.globaltester.control.soap.integrationtest</artifactId>
-  <version>3.10.1-SNAPSHOT</version>
+  <version>3.10.2-SNAPSHOT</version>
   <packaging>eclipse-test-plugin</packaging>
 
 </project>

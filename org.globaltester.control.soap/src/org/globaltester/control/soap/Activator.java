@@ -7,8 +7,6 @@ import javax.xml.ws.Endpoint;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.globaltester.control.RemoteControlHandler;
 import org.globaltester.control.soap.preferences.PreferenceConstants;
-import org.globaltester.logging.BasicLogger;
-import org.globaltester.logging.tags.LogLevel;
 import org.globaltester.service.GtService;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
@@ -22,7 +20,6 @@ import org.osgi.framework.ServiceRegistration;
  */
 public class Activator extends AbstractUIPlugin
 {
-
 	private static BundleContext context;
 	private static Activator plugin;
 
@@ -44,24 +41,25 @@ public class Activator extends AbstractUIPlugin
 
 
 	@Override
-	public void start(BundleContext bundleContext) throws Exception
+	public void start(BundleContext context) throws Exception
 	{
-		BasicLogger.log("START Activator Control SOAP", LogLevel.TRACE);
-		Activator.context = bundleContext;
+		// BasicLogger.log("START Activator Control SOAP", LogLevel.TRACE);
+		Activator.context = context;
 		Activator.plugin = this;
 
-		// register endpointManager as GtService
-		endpointManager = new SoapControlEndpointManager();
-		gtServiceRegistration = context.registerService(GtService.class, endpointManager, new Hashtable<String, String>());
+			// register endpointManager as GtService
+			endpointManager = new SoapControlEndpointManager();
+			gtServiceRegistration = context.registerService(GtService.class, endpointManager, new Hashtable<String, String>());
 
-		registerServices();
+			registerServices();
 
-		// handle autostart
-		boolean autostart = getPreferenceStore().getBoolean(PreferenceConstants.P_SOAP_AUTOSTART);
-		if (autostart) {
-			endpointManager.start();
-		}
-		BasicLogger.log("END Activator Control SOAP", LogLevel.TRACE);
+			// handle autostart
+			boolean autostart = getPreferenceStore().getBoolean(PreferenceConstants.P_SOAP_AUTOSTART);
+			if (autostart) {
+				endpointManager.start();
+			}
+
+		// BasicLogger.log("END Activator Control SOAP", LogLevel.TRACE);
 	}
 
 
@@ -82,6 +80,7 @@ public class Activator extends AbstractUIPlugin
 
 	public void registerServices()
 	{
+		unregisterServices();
 		preferenceManagerRegistration = context.registerService(RemoteControlHandler.class, new PreferenceManagerSoap(), new Hashtable<String, String>());
 		propertyManagerRegistration = context.registerService(RemoteControlHandler.class, new PropertyManagerSoap(), new Hashtable<String, String>());
 		workspaceManagerRegistration = context.registerService(RemoteControlHandler.class, new WorkspaceManagerSoap(), new Hashtable<String, String>());

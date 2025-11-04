@@ -59,9 +59,14 @@ public class SoapControlEndpointManager extends AbstractGtService {
 
 	@Override
 	public void start() {
+		port = Activator.getDefault().getPreferenceStore().getInt(PreferenceConstants.P_SOAP_PORT);
+		start(port);
+	}
+
+	public void start(int portToUse) {
 
 		host = Activator.getDefault().getPreferenceStore().getString(PreferenceConstants.P_SOAP_HOST);
-		port = Activator.getDefault().getPreferenceStore().getInt(PreferenceConstants.P_SOAP_PORT);
+		port = portToUse;
 
 		String portProperty = System.getProperty("org.globaltester.control.soap.port");
 		try {

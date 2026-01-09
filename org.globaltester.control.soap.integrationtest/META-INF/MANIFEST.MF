@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GT RemoteControl SOAP Integration Test
 Bundle-SymbolicName: org.globaltester.control.soap.integrationtest
-Bundle-Version: 4.1.6.qualifier
+Bundle-Version: 4.1.7.qualifier
 Bundle-Vendor: secunet Security Networks AG
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.globaltester.control.soap.sample.client,

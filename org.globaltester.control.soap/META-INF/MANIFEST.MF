@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GT Control SOAP Interface
 Bundle-SymbolicName: org.globaltester.control.soap;singleton:=true
-Bundle-Version: 4.1.9.qualifier
+Bundle-Version: 4.1.10.qualifier
 Bundle-Activator: org.globaltester.control.soap.Activator
 Bundle-Vendor: secunet Security Networks AG
 Bundle-RequiredExecutionEnvironment: JavaSE-17
